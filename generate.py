@@ -1,9 +1,5 @@
-
 import os
 import openai
-import random
-
-random.seed(10)
 
 PROGRAMMING_LANGUAGES = ["Python", "Go", "Java", "TypeScript"]
 PROGRAMMING_CONCEPTS = ["Variables", "Functions", "Object Oriented Programming", "Polymorphism", "Control Structures"]
@@ -19,7 +15,3 @@ def generate_tutorial(concept: str, language: str):
         ]
     )
     return completion.choices[0].message.content
-
-tutorial = generate_tutorial(random.choice(PROGRAMMING_CONCEPTS), random.choice(PROGRAMMING_LANGUAGES))
-print(tutorial)
-
